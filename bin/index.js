@@ -5,7 +5,7 @@ const { getStatus, enable, disable } = require('../lib/script');
 
 const commands = ['add', 'remove', 'status'];
 const optionsLength = {
-  add: 4,
+  add: 5,
   delete: 4,
   status: 4
 };
