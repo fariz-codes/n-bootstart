@@ -1,0 +1,46 @@
+{
+  "name": "start-on-boot",
+  "version": "0.0.1",
+  "description": "NPM package to start node js projects on system boot",
+  "main": "./bin/index.js",
+  "bin": {
+    "start-on-boot": "./bin/index.js"
+  },
+  "preferGlobal": true,
+  "deprecated": false,
+  "author": {
+    "name": "Mohammed Fariz",
+    "email": "mohmd.fariz@gmail.com",
+    "url": "https://www.linkedin.com/in/mohammed-fariz"
+  },
+  "keywords": [
+    "start-on-boot",
+    "system-boot",
+    "Linux",
+    "Mac",
+    "OS",
+    "Windows",
+    "Ubuntu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fariz-codes/node-start-on-boot"
+  },
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Mohammed Fariz",
+      "email": "mohmd.fariz@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "files": [
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "bin/*",
+    "lib/*"
+  ]
+}
