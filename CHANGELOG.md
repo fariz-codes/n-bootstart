@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Create functionality to remove project script
+- Do code clean
+
 ## 0.1.0
 
 - Update config file
