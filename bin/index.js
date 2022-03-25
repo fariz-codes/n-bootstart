@@ -32,5 +32,5 @@ if (isValidCommand()) {
   console.log("n-bootstart remove gateway-app                              removes the boot-start script of the 'gateway-app' project\n");
 }
 
-require('../lib/script');
+module.exports = require('../lib/script');
 
