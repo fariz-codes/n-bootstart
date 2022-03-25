@@ -24,12 +24,14 @@ console.log('                               ---------------------------------- '
 if (isValidCommand()) {
   require('../lib/process-command');
 } else {
-  console.log('Usage: n-bootstart <command> [arg1] [arg2] \n');
+  console.log('Usage: n-bootstart <command> [arg1] [arg2] ... [argn] \n');
   console.log("n-bootstart add [project-name] [path]                       starts the provided project when the system starts up\n");
-  console.log("n-bootstart remove [project-name]                           removes the boot-start script of the mentioned project\n\n");
+  console.log("n-bootstart remove [project-name]                           removes the boot-start script of the mentioned project\n");
+  console.log("n-bootstart view [project-name]                             displays the path of the mentioned project\n\n");
   console.log('Examples: \n');
   console.log("n-bootstart add gateway-app D:\/gateway-backend              starts the 'gateway-app' project when the system starts up\n");
   console.log("n-bootstart remove gateway-app                              removes the boot-start script of the 'gateway-app' project\n");
+  console.log("n-bootstart view gateway-app                                displays the path of the 'gateway-app' project\n");
 }
 
 module.exports = require('../lib/script');

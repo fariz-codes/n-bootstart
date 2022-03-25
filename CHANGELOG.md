@@ -1,3 +1,8 @@
+## 0.3.0
+
+- Create functionality to view the project path
+- Do code clean
+
 ## 0.2.0
 
 - Create functionality to remove project script
