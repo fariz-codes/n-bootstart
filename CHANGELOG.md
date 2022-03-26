@@ -1,3 +1,7 @@
+## 0.3.3
+
+- Update logic based on Mac OS
+
 ## 0.3.2
 
 - Modify enable option's functionality to include env variables
