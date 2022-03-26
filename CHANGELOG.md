@@ -1,3 +1,7 @@
+## 0.3.2
+
+- Modify enable option's functionality to include env variables
+
 ## 0.3.1
 
 - Update script file with class

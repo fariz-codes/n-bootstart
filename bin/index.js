@@ -4,7 +4,7 @@ const packageJson = require('./../package.json');
 
 const commands = ['add', 'remove', 'view'];
 const optionsLength = {
-  add: 5,
+  add: 6,
   remove: 4,
   view: 4
 };
@@ -24,14 +24,14 @@ console.log('                               ---------------------------------- '
 if (isValidCommand()) {
   require('../lib/process-command');
 } else {
-  console.log('Usage: n-bootstart <command> [arg1] [arg2] ... [argn] \n');
-  console.log("n-bootstart add [project-name] [path]                       starts the provided project when the system starts up\n");
+  console.log('Usage: n-bootstart <command> [args] \n');
+  console.log("n-bootstart add [project-name] [path] [env-var1,env-var2]   starts the project using the provided arguments when the system starts up\n");
   console.log("n-bootstart remove [project-name]                           removes the boot-start script of the mentioned project\n");
-  console.log("n-bootstart view [project-name]                             displays the path of the mentioned project\n\n");
+  console.log("n-bootstart view [project-name]                             displays the info of the mentioned project\n\n");
   console.log('Examples: \n');
-  console.log("n-bootstart add gateway-app D:\/gateway-backend              starts the 'gateway-app' project when the system starts up\n");
-  console.log("n-bootstart remove gateway-app                              removes the boot-start script of the 'gateway-app' project\n");
-  console.log("n-bootstart view gateway-app                                displays the path of the 'gateway-app' project\n");
+  console.log("n-bootstart add BE-API D:\/be-api port=9099,secure=true      starts the 'BE-API' project using the provided path & env variables when the system starts up\n");
+  console.log("n-bootstart remove BE-API                                   removes the boot-start script of the project - 'BE-API'\n");
+  console.log("n-bootstart view BE-API                                     displays the info for the project - 'BE-API'\n");
 }
 
 module.exports = require('../lib/script');
