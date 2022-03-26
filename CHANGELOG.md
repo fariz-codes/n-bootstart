@@ -1,3 +1,7 @@
+## 0.3.1
+
+- Update script file with class
+
 ## 0.3.0
 
 - Create functionality to view the project path
