@@ -1,3 +1,8 @@
+## 0.3.4
+
+- Code clean
+- Bug fixes based on Non-windows OS
+
 ## 0.3.3
 
 - Update logic based on Mac OS
