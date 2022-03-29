@@ -1,6 +1,11 @@
+## 0.4.0
+
+- Do code clean
+- Create functionality to list the added projects
+
 ## 0.3.4
 
-- Code clean
+- Do code clean
 - Bug fixes based on Non-windows OS
 
 ## 0.3.3
