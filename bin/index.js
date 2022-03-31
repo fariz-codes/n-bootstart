@@ -2,12 +2,17 @@
 
 const packageJson = require('./../package.json');
 
-const commands = ['add', 'remove', 'view', 'list'];
+const os = require('os');
+const isLinux = os.type().indexOf('Windows') > -1 ? false : true;
+const examplePath = isLinux ? '/home/user1/projects/be-api/index.js' : 'D:\/be-api/index.js';
+const cmdSymbol = isLinux ? '$' : '>';
+const commands = ['add', 'remove', 'view', 'list', 'examples'];
 const optionsLength = {
   add: 6,
   remove: 4,
   view: 4,
-  list: 3
+  list: 3,
+  examples: 3
 };
 
 function getArg(index) {
@@ -23,17 +28,29 @@ console.log('                               ---------------------------------- '
 console.log(`                              |        n-bootstart v${packageJson.version}        |`);
 console.log('                               ---------------------------------- ');
 if (isValidCommand()) {
-  require('../lib/process-command');
+  if (getArg(2) === 'examples') {
+    console.log('Usage: n-bootstart <command> [args] \n');
+    console.log('Examples : \n');
+    console.log('1. Enable boot-start for a project with the below info.');
+    console.log(`   Info -> { Name: 'BE-API', Start_file_path: '${examplePath}', Env_variables: { port: 9000, secure: true } }\n`);
+    console.log(`   ${cmdSymbol} n-bootstart add BE-API ${examplePath} port=9099,secure=true\n`);
+    console.log('2. Disable boot-start for an existing project.\n');
+    console.log(`   ${cmdSymbol} n-bootstart remove BE-API\n`);
+    console.log('3. View the information that are configured for a project.\n');
+    console.log(`   ${cmdSymbol} n-bootstart view BE-API\n`);
+    console.log('4. List all the configured projects.\n');
+    console.log(`   ${cmdSymbol} n-bootstart list`);
+  } else {
+    require('../lib/process-command');
+  }
 } else {
   console.log('Usage: n-bootstart <command> [args] \n');
-  console.log("n-bootstart add [project-name] [path] [env-var1,env-var2]   starts the project using the provided arguments when the system starts up\n");
-  console.log("n-bootstart remove [project-name]                           removes the boot-start script of the mentioned project\n");
-  console.log("n-bootstart view [project-name]                             displays the info of the mentioned project\n");
-  console.log("n-bootstart list                                            displays the project-names enabled with boot-start\n\n");
-  console.log('Examples: \n');
-  console.log("n-bootstart add BE-API D:\/be-api port=9099,secure=true      starts the 'BE-API' project using the provided path & env variables when the system starts up\n");
-  console.log("n-bootstart remove BE-API                                   removes the boot-start script of the project - 'BE-API'\n");
-  console.log("n-bootstart view BE-API                                     displays the info for the project - 'BE-API'\n");
+  console.log('Commands : \n');
+  console.log("   add [project-name] [start-file-path] [env1,env2]         enables the boot-start for a project\n");
+  console.log("   remove [project-name]                                    disables the boot-start for the mentioned project\n");
+  console.log("   view [project-name]                                      displays the configured info for the mentioned project\n");
+  console.log("   list                                                     displays all the project-names enabled with boot-start\n");
+  console.log("   examples                                                 displays the example syntax for the available commands");
 }
 
 module.exports = require('../lib/script');
