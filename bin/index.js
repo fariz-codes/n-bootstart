@@ -5,7 +5,8 @@ const packageJson = require('./../package.json');
 const os = require('os');
 const isLinux = os.type().indexOf('Windows') > -1 ? false : true;
 const examplePath = isLinux ? '/home/user1/projects/be-api/index.js' : 'D:\/be-api/index.js';
-const cmdSymbol = isLinux ? '$' : '>';
+let cmdSymbol = isLinux ? '$' : '>';
+cmdSymbol = os.type().indexOf('Darwin') > -1 ? '#' : cmdSymbol;
 const commands = ['add', 'remove', 'view', 'list', 'examples'];
 const optionsLength = {
   add: 6,

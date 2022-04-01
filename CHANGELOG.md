@@ -1,3 +1,9 @@
+## 0.4.1
+
+- Do code clean
+- Bugfixes in list functionality
+- Bugfixes when querying the cron content
+
 ## 0.4.0
 
 - Do code clean
