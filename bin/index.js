@@ -25,9 +25,9 @@ function isValidCommand() {
   return commands.indexOf(command) > -1 && process.argv.length <= optionsLength[command];
 };
 
-console.log('                               ---------------------------------- ');
-console.log(`                              |        n-bootstart v${packageJson.version}        |`);
-console.log('                               ---------------------------------- ');
+console.log('                               -------------------------- ');
+console.log(`                              | node(n)-bootstart v${packageJson.version} |`);
+console.log('                               -------------------------- ');
 if (isValidCommand()) {
   if (getArg(2) === 'examples') {
     console.log('Usage: n-bootstart <command> [args] \n');
