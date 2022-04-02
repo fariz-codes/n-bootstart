@@ -26,7 +26,7 @@ function isValidCommand() {
 };
 
 console.log('                               -------------------------- ');
-console.log(`                              | node(n)-bootstart v${packageJson.version} |`);
+console.log(`                              | n(node)-bootstart v${packageJson.version} |`);
 console.log('                               -------------------------- ');
 if (isValidCommand()) {
   if (getArg(2) === 'examples') {
