@@ -1,3 +1,9 @@
+## 0.4.2
+
+- Do code clean
+- Update Readme file
+- Update folder structure
+
 ## 0.4.1
 
 - Do code clean

@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-const packageJson = require('./../package.json');
+/**
+ * This source code is licensed under MIT.
+ */
+
+const packageJson = require('../package.json');
 
 const os = require('os');
 const isLinux = os.type().indexOf('Windows') > -1 ? false : true;
@@ -25,9 +29,9 @@ function isValidCommand() {
   return commands.indexOf(command) > -1 && process.argv.length <= optionsLength[command];
 };
 
-console.log('                               -------------------------- ');
-console.log(`                              | n(node)-bootstart v${packageJson.version} |`);
-console.log('                               -------------------------- ');
+console.log('                                           -------------------------- ');
+console.log(`                                          | (node)n-bootstart v${packageJson.version} |`);
+console.log('                                           -------------------------- ');
 if (isValidCommand()) {
   if (getArg(2) === 'examples') {
     console.log('Usage: n-bootstart <command> [args] \n');
@@ -37,7 +41,7 @@ if (isValidCommand()) {
     console.log(`   ${cmdSymbol} n-bootstart add BE-API ${examplePath} port=9099,secure=true\n`);
     console.log('2. Disable boot-start for an existing project.\n');
     console.log(`   ${cmdSymbol} n-bootstart remove BE-API\n`);
-    console.log('3. View the information that are configured for a project.\n');
+    console.log('3. View the configured information for a project.\n');
     console.log(`   ${cmdSymbol} n-bootstart view BE-API\n`);
     console.log('4. List all the configured projects.\n');
     console.log(`   ${cmdSymbol} n-bootstart list`);
@@ -53,6 +57,3 @@ if (isValidCommand()) {
   console.log("   list                                                     displays all the project-names enabled with boot-start\n");
   console.log("   examples                                                 displays the example syntax for the available commands");
 }
-
-module.exports = require('../lib/script');
-

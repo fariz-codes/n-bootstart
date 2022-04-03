@@ -1,10 +1,10 @@
 {
   "name": "n-bootstart",
-  "version": "0.4.0",
-  "description": "A script to start node js projects when the system boots up in any OS",
-  "main": "./bin/index.js",
+  "version": "0.4.2",
+  "description": "A script to start node js projects when the system boots up",
+  "main": "index.js",
   "bin": {
-    "n-bootstart": "./bin/index.js"
+    "n-bootstart": "bin/n-bootstart.js"
   },
   "preferGlobal": true,
   "deprecated": false,
@@ -15,7 +15,10 @@
   },
   "keywords": [
     "boot-start",
+    "Cent OS",
+    "Fedora",
     "Linux",
+    "Red Hat Enterprise Linux",
     "Mac",
     "OS",
     "start-on-boot",
@@ -43,5 +46,9 @@
     "README.md",
     "bin/*",
     "lib/*"
-  ]
+  ],
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  }
 }
