@@ -1,3 +1,7 @@
+## 0.4.4
+
+- Bugfix for dependency installation
+
 ## 0.4.2
 
 - Do code clean
