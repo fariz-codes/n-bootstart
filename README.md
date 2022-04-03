@@ -1,4 +1,4 @@
-# n-bootstart
+# n(node)-bootstart
 **A script to start Node JS projects when the system boots up**
 
 [![npm Downloads](https://img.shields.io/npm/dm/n-bootstart.svg?style=flat-square)](https://www.npmjs.com/package/n-bootstart)
