@@ -61,7 +61,7 @@ const bootScripts = new bootStart();
 
 ```
 bootScripts._enable(name, path, envVariables); // Enable boot-start for a project
-bootScripts._diable(name);                     // Disable boot-start for an existing project
+bootScripts._diable(name);                     // Disable boot-start for a project
 bootScripts._view(name);                       // View the configured information for a project
 bootScripts._list();                           // List all the configured projects
 ```
