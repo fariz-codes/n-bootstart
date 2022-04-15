@@ -1,6 +1,6 @@
 {
   "name": "n-bootstart",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A script to start node js projects when the system boots up",
   "main": "index.js",
   "bin": {
