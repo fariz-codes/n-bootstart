@@ -20,13 +20,15 @@ npm i n-bootstart --save
 
 ## Tested Operating Systems
 
-- Windows 11, Mac monterey, RHEL 7.9, Ubuntu 20.04, Cent OS 7, Fedora 35
+- Windows 11, Mac Monterey, RHEL 7.9, Ubuntu 20.04, Cent OS 7, Fedora 35
 
 ## About
 
 <img src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/cli.png?raw=true" alt="CLI Options">
 
 **n-bootstart** is a module that creates a script based on the OS which will run the configured Node JS projects when the system is turned on.
+
+You can also use n-bootstart for a NPM module like pm2/forever/nodemon by passing the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
 
 ## How it works
 

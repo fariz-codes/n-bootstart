@@ -1,3 +1,8 @@
+## 0.5.1
+
+- Minor bug fix in view option for Windows OS
+- Updates in Readme file
+
 ## 0.5.0
 
 - Create functionality to enable boot start based on a NPM module
