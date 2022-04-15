@@ -1,3 +1,9 @@
+## 0.4.5
+
+- Create functionality to enable boot start based on a NPM module
+- Update content of examples command
+- Update view function to return `path` & `startfile` of a project
+
 ## 0.4.4
 
 - Bugfix for dependency installation
