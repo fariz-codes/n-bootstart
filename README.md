@@ -9,13 +9,13 @@
 1. Install as a global package to access it from the CLI.
 
 ```
-npm i n-bootstart -g
+npm i n-bootstart@latest -g
 ```
 
 2. Install as a dependency package to access it inside the Node JS projects.
 
 ```
-npm i n-bootstart --save
+npm i n-bootstart@latest --save
 ```
 
 ## Tested Operating Systems
@@ -30,7 +30,7 @@ npm i n-bootstart --save
 
 You can also start a NPM module like **pm2**/**forever**/**nodemon** by passing the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
 
-Please run `n-bootstart examples` to know about the CLI commands
+Please run `n-bootstart examples` to know about the CLI commands.
 
 ## How it works
 
@@ -57,17 +57,17 @@ n-bootstart examples
 - Initialize
 
 ```
-const bootStart = require('n-bootstart');
-const bootScripts = new bootStart();
+const nBootStart = require('n-bootstart');
+const nBootScripts = new nBootStart();
 ```
 
 - Access functions
 
 ```
-bootScripts._enable(name, path, envVariables); // Enable boot-start for a project
-bootScripts._diable(name);                     // Disable boot-start for a project
-bootScripts._view(name);                       // View the configured information for a project
-bootScripts._list();                           // List all the configured projects
+nBootScripts._enable(name, path, envVariables); // Enable boot-start for a project
+nBootScripts._diable(name);                     // Disable boot-start for a project
+nBootScripts._view(name);                       // View the configured information for a project
+nBootScripts._list();                           // List all the configured projects
 ```
 
 ## CHANGELOG
