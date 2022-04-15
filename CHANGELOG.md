@@ -1,4 +1,4 @@
-## 0.4.5
+## 0.5.0
 
 - Create functionality to enable boot start based on a NPM module
 - Update content of examples command
