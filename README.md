@@ -28,9 +28,9 @@ npm i n-bootstart@latest --save
 
 **n-bootstart** is a module that creates a script based on the OS which will run the configured Node JS projects when the system is turned on.
 
-:pushpin: Configure a project that uses the NPM module like **pm2**/**forever**/**nodemon** by passing the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
+:pushpin: To configure a project that uses the NPM module like **pm2**/**forever**/**nodemon**, pass the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
 
-Please run `n-bootstart examples` to know about the CLI commands.
+Please check the available **examples** to know about the CLI commands.
 
 ## How it works
 
