@@ -1,3 +1,7 @@
+## 0.5.5
+
+- Updates in Readme file
+
 ## 0.5.1
 
 - Minor bug fix in view option for Windows OS
