@@ -24,14 +24,12 @@ npm i n-bootstart@latest --save
 
 ## About
 
-<img src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/cli.png?raw=true" alt="CLI Options">
+<img align="left" src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/cli.png?raw=true" alt="CLI Options">
 <img src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/examples.png?raw=true" alt="CLI Examples">
 
 **n-bootstart** is a module that creates a script based on the OS which will run the configured Node JS projects when the system is turned on.
 
 :pushpin: To configure a project that uses the NPM module like **pm2**/**forever**/**nodemon**, pass the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
-
-Please check the available **examples** to know about the CLI commands.
 
 ## How it works
 
