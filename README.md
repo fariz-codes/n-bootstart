@@ -9,13 +9,13 @@
 1. Install as a global package to access it from the CLI.
 
 ```
-npm i n-bootstart@latest -g
+npm i n-bootstart -g
 ```
 
 2. Install as a dependency package to access it inside the Node JS projects.
 
 ```
-npm i n-bootstart@latest --save
+npm i n-bootstart --save
 ```
 
 ## Tested Operating Systems
@@ -34,9 +34,9 @@ npm i n-bootstart@latest --save
 
 ## How it works
 
-- In Windows OS, it will create a vbs file in the startup folder path.
+- In Windows OS, it will create a vbs file that contains scripts to start the Node JS project in the startup folder.
 
-- In Linux based OS, it will add the commands in the user's crontab.
+- In Linux based OS, it will add the commands to start the Node JS project in the user's crontab.
 
 ## Using from CLI
 
