@@ -31,8 +31,6 @@ npm i n-bootstart --save
 
 :pushpin: To configure a project that uses the NPM module like **pm2**/**forever**/**nodemon**, pass the environment variables `nboot_npm_name` & `nboot_npm_cmd` when enabling the boot start.
 
-<img src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/examples.png?raw=true" alt="CLI Examples">
-
 ## How it works
 
 - In Windows OS, it will create a vbs file that contains scripts to start the Node JS project in the startup folder.
@@ -52,6 +50,8 @@ n-bootstart
 ```
 n-bootstart examples
 ```
+
+<img src="https://github.com/fariz-codes/npm-images/blob/master/n-bootstart/examples.png?raw=true" alt="CLI Examples">
 
 ## Using from Node JS projects
 
