@@ -1,3 +1,7 @@
+## 0.6.0
+
+- Improve code base standards
+
 ## 0.5.5
 
 - Updates in Readme file
