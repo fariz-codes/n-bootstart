@@ -4,20 +4,22 @@
  * This source code is licensed under MIT.
  */
 
+const inquirer = require('inquirer');
 const packageJson = require('../package.json');
-
 const os = require('os');
+const scripts = require('../lib/script');
 const isLinux = os.type().indexOf('Windows') > -1 ? false : true;
 const examplePath = isLinux ? '/home/user1/projects/be-api/index.js' : 'D:\/be-api/index.js';
 const exampleExternalPath = isLinux ? '/home/user1/projects/be-api/app.json' : 'D:\/be-api/app.json';
 let cmdSymbol = isLinux ? '$' : '>';
 cmdSymbol = os.type().indexOf('Darwin') > -1 ? '#' : cmdSymbol;
-const commands = ['add', 'remove', 'view', 'list', 'examples'];
+const commands = ['add', 'remove', 'view', 'list', 'remove-all', 'examples'];
 const optionsLength = {
   add: 7,
   remove: 4,
   view: 4,
   list: 3,
+  'remove-all': 3,
   examples: 3
 };
 
@@ -30,11 +32,32 @@ function isValidCommand() {
   return commands.indexOf(command) > -1 && process.argv.length <= optionsLength[command];
 };
 
+async function getConfirmation() {
+  const prompt = inquirer.createPromptModule();
+  const { confirmation } = await prompt([{
+    name: "confirmation",
+    type: "input",
+    message: "This will delete all the added projects. y to proceed / n to abort ?"
+  }]);
+
+  if (confirmation.toString().trim().toLowerCase() === 'y') {
+    const bootScripts = new scripts();
+    let projects = bootScripts._removeAll();
+    if (projects && projects.length > 0) {
+      console.log(`Deleted ${projects.length} projects`);
+    } else {
+      console.log('No projects to delete');
+    }
+  }
+}
+
 console.log('                                           -------------------------- ');
 console.log(`                                          | (node)n-bootstart v${packageJson.version} |`);
 console.log('                                           -------------------------- ');
 if (isValidCommand()) {
-  if (getArg(2) === 'examples') {
+  if (getArg(2) === 'remove-all') {
+    getConfirmation();
+  } else if (getArg(2) === 'examples') {
     console.log('Usage: n-bootstart <command> [args] \n');
     console.log('Examples: \n');
     console.log('1. Enable boot-start for a project.\n');
