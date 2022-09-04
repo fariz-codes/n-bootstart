@@ -48,9 +48,9 @@ async function getConfirmation() {
 
   if (confirmInput === 'y') {
     const bootScripts = new scripts();
-    let projects = bootScripts._removeAll();
-    if (projects && projects.length > 0) {
-      console.log(`\nDeleted ${projects.length} projects`);
+    let disabled = bootScripts._removeAll();
+    if (disabled && disabled.count > 0) {
+      console.log(`\nDeleted ${disabled.count} projects`);
     } else {
       console.log('\nNo projects to delete');
     }
@@ -81,12 +81,14 @@ if (isValidCommand()) {
     console.log(`               Env_variables: { nboot_npm_name: pm2, nboot_npm_cmd: start, env:uat }`);
     console.log(`             }`);
     console.log(`   ${cmdSymbol} n-bootstart add BE-API ${exampleExternalPath} nboot_npm_name=pm2,nboot_npm_cmd=start,env=uat\n`);
-    console.log('2. Disable boot-start for an existing project.');
+    console.log('2. Disable the boot-start for an existing project.');
     console.log(`   ${cmdSymbol} n-bootstart remove BE-API\n`);
     console.log('3. View the configured information for a project.');
     console.log(`   ${cmdSymbol} n-bootstart view BE-API\n`);
     console.log('4. List all the configured projects.');
-    console.log(`   ${cmdSymbol} n-bootstart list`);
+    console.log(`   ${cmdSymbol} n-bootstart list\n`);
+    console.log('5. Disables the boot-start for all the added projects.');
+    console.log(`   ${cmdSymbol} n-bootstart remove-all`);
   } else {
     require('../lib/process-command');
   }
@@ -97,6 +99,6 @@ if (isValidCommand()) {
   console.log("   remove [project-name]                                    disables the boot-start for the mentioned project\n");
   console.log("   view [project-name]                                      displays the configured info for the mentioned project\n");
   console.log("   list                                                     displays all the project-names enabled with boot-start\n");
-  console.log("   remove-all                                               removes all the added projects\n");
+  console.log("   remove-all                                               disables the boot-start for all the added projects\n");
   console.log("   examples                                                 displays the example syntax for the available commands");
 }
