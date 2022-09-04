@@ -39,15 +39,23 @@ async function getConfirmation() {
     type: "input",
     message: "This will delete all the added projects. y to proceed / n to abort ?"
   }]);
+  const confirmInput = confirmation.toString().trim().toLowerCase();
 
-  if (confirmation.toString().trim().toLowerCase() === 'y') {
+  if (confirmInput !== 'y' && confirmInput !== 'n') {
+    console.log('\n Invalid option. Try again');
+    return;
+  }
+
+  if (confirmInput === 'y') {
     const bootScripts = new scripts();
     let projects = bootScripts._removeAll();
     if (projects && projects.length > 0) {
-      console.log(`Deleted ${projects.length} projects`);
+      console.log(`\nDeleted ${projects.length} projects`);
     } else {
-      console.log('No projects to delete');
+      console.log('\nNo projects to delete');
     }
+  } else {
+    console.log('\nOperation aborted');
   }
 }
 
@@ -89,5 +97,6 @@ if (isValidCommand()) {
   console.log("   remove [project-name]                                    disables the boot-start for the mentioned project\n");
   console.log("   view [project-name]                                      displays the configured info for the mentioned project\n");
   console.log("   list                                                     displays all the project-names enabled with boot-start\n");
+  console.log("   remove-all                                               removes all the added projects\n");
   console.log("   examples                                                 displays the example syntax for the available commands");
 }
