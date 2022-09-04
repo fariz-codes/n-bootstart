@@ -68,6 +68,7 @@ nBootScripts._enable(name, path, envVariables); // Enable boot-start for a proje
 nBootScripts._diable(name);                     // Disable boot-start for a project
 nBootScripts._view(name);                       // View the configured information for a project
 nBootScripts._list();                           // List all the configured projects
+nBootScripts._removeAll();                      // Disables boot-start for all the added projects
 ```
 
 ## CHANGELOG
