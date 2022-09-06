@@ -1,3 +1,7 @@
+## 0.7.0
+
+- Add functionality to remove all added projects
+
 ## 0.6.0
 
 - Improve code base standards
